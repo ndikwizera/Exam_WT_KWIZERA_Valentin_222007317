@@ -9,7 +9,10 @@ Job Search Support Platform
 
 Our Job Search Support Platform is designed to assist users in finding jobs and help employers in hiring the right candidates. The platform revolves around two key roles: the admin and the user.
 
-The system operates on a robust database with the server name set as "localhost," using the username "kwizera" and password "valentin" to access the "job_search_support_platform" database.
+The system operates on a robust database with
+the server name set as "localhost," 
+using the username "kwizera" 
+password "valentin" to access the "job_search_support_platform" database.
 
 HOW OUR PLATFORM CAN BE USED:
 
