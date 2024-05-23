@@ -15,6 +15,7 @@ HOW OUR PLATFORM CAN BE USED:
 
 User Experience:
 The journey for a user begins with registration. Initially, users can access various informational pages such as Home, About, Contact Us, and Services. However, to leverage advanced features like job searching, users must first register on the platform. This registration process involves signing up and logging in. Once logged in, users can access all the services, including the jobseeker form, where they can provide comprehensive details about themselves to enhance their job search profile.
+After logining of user he or she can access to joblisting where they can see all job that are on platform.
 
 Admin Experience:
 On the admin side, access is granted through a secure login form. Once logged in, the admin can access the admin home page, where they have the privileges to view, update, and delete user information stored in the database. This ensures that the system remains up-to-date and maintains data integrity.
