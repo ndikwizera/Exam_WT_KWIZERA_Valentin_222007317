@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Internship seeker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .full-screen-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .login-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-title h1 {
+            margin: 0;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: 0;
+        }
+
+        .input-group label {
+            flex-basis: 70%;
+            margin-bottom: 5px;
+            text-align: left;
+            margin-right: 10px;
+            color:black;
+            font-size: 16px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            flex-basis: calc(50% - 10px); /* 50% width with margin between elements */
+            margin-right: 10px;
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+        }
+
+        .input-group textarea {
+            flex-basis: 70%; /* Full width for textarea */
+        }
+
+        .input-group select {
+            flex-basis: 30%; /* Adjust width for select elements */
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+       
+    </style>
+</head>
+<center>
+<body> 
+    <section>
+    <div class="full-screen-container">
+        <div class="login-container">
+            <div class="login-title">
+                <h1>Internship</h1>
+            </div>
+         <form action="trainee.php" class="sign in" method="POST">
+
+                <div class="input-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="fname" name="fname" required>
+                </div><br>
+                <div class="input-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="lname" name="lname" required>
+                </div><br>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="email" name="email" placeholder="Enter your email" required>
+                </div><br>
+
+                 <div class="input-group">
+                    <label for="phone">Telephone</label>
+                    <input type="tel" class="phone" name="phone" required>
+                </div><br>
+                
+                <div class="input-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" onchange="updateCities()" required>
+                            <option value="rda">Rwanda</option>
+                            <option value="ug">Uganda</option>
+                            <option value="kye">Kenya</option>
+                            <option value="tzd">Tanzania</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="city">City</label>
+                        <select id="city" name="city" required>
+                            <!-- City options will be populated dynamically based on country selection -->
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="birth_date">Birth date</label>
+                        <input type="date" id="birth_date" name="birth_date" required>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="position">Internship Position</label><br>
+                    <select id="position" name="position" required>
+                        <option value="">Select Internship Position</option>
+                        <option value="Software Developer">Internship(Software Developer)</option>
+                        <option value="Marketing Manager">Internship(Marketing)</option>
+                        <option value="Accountant">Internship(Accountant)</option>
+                        <option value="hr">Internship(Human Resource Management)</option>
+                    </select>
+                    </div>
+
+                <div class="form-group">
+                    <button type="submit">Save</button>
+                </div>
+        </form>
+    </div>
+    </center>
+</section>
+     <script>
+        function updateCities() {
+            var country = document.getElementById("country").value;
+            var citySelect = document.getElementById("city");
+            citySelect.innerHTML = ""; // Clear previous options
+
+            var cities = [];
+            switch (country) {
+                case "rda":
+                    cities = ["Kigali", "Gisenyi", "Huye", "Muhanga", "Musanze", "Rwamagana"];
+                    break;
+                case "ug":
+                    cities = ["Kampala", "Entebbe", "Jinja"];
+                    break;
+                case "kye":
+                    cities = ["Nairobi", "Mombasa", "Kisumu"];
+                    break;
+                case "tzd":
+                    cities = ["Dar es Salaam", "Arusha", "Mwanza", "Dodoma"];
+                    break;
+                default:
+                    break;
+            }
+
+            cities.forEach(function(city) {
+                var option = document.createElement("option");
+                option.value = city;
+                option.text = city;
+                citySelect.appendChild(option);
+            });
+        }
+    </script>
+    <footer>
+      
+    </footer>
+</body>
+</html>
+
+   

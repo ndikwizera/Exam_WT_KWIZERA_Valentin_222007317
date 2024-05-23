@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/job.jpg');
+            color: black;
+        }
+        .full-screen-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-title h1 {
+            margin: 0;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: 0;
+        }
+        .input-group label {
+            flex-basis: 70%;
+            margin-bottom: 5px;
+            text-align: left;
+            margin-right: 10px;
+            color:black;
+            font-size: 16px;
+        }
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            flex-basis: calc(50% - 10px); /* 50% width with margin between elements */
+            margin-right: 10px;
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+        }
+        .input-group textarea {
+            flex-basis: 70%; /* Full width for textarea */
+        }
+        .input-group select {
+            flex-basis: 30%; /* Adjust width for select elements */
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="full-screen-container">
+            <div class="login-container">
+                <div class="login-title">
+                    <h1><b>JOB</b></h1>
+                </div>
+                <form action="job.php" class="Form" method="post">
+                    <div class="input-group">
+                        <label for="company_name">Company Name:</label>
+                        <input type="text" id="company_name" name="company_name" required><br>
+                    </div>
+                    <div class="input-group">
+                        <label for="employer_id">Employer ID:</label>
+                        <input type="text" id="employer_id" name="employer_id" required><br> 
+                    </div>
+                    <div class="input-group">    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" required><br>
+                    </div>
+                    <div class="input-group">
+                        <label for="job_title">Job Title:</label>
+                        <input type="text" id="job_title" name="job_title" required><br>
+                    </div><br>
+                    <div class="input-group">
+                        <label for="offer_job">Offer Type:</label><br>
+                        <select id="offer_job" name="offer_job">
+                            <option value="job">Job</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="contract_type">Contract Type:</label><br>
+                        <select id="contract_type" name="contract_type">
+                            <option value="">_select a value_</option>
+                            <option value="full">Full time</option>
+                            <option value="part">Part time</option>
+                            <option value="contract">Contract</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="description">Full Description:</label><br>
+                        <textarea id="description" name="description" rows="15" required></textarea>
+                    </div><br>
+                    <div class="input-group">
+                        <label for="date">Application Deadline:</label>
+                        <input type="date" id="date" name="date" required>
+                        <label for="time"></label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
