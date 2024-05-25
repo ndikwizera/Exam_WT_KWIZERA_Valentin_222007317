@@ -3,8 +3,8 @@
 session_start();
 
 $servername = "localhost";
-$username = "kwizera";
-$password = "valentin";
+$username = "222007317";
+$password = "kwizera";
 $database = "job_search_support_platform";
 
 
