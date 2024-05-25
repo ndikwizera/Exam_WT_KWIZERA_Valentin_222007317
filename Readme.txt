@@ -11,8 +11,8 @@ Our Job Search Support Platform is designed to assist users in finding jobs and 
 
 The system operates on a robust database with
 the server name set as "localhost," 
-using the username "kwizera" 
-password "valentin" to access the "job_search_support_platform" database.
+using the username "222007317" 
+password "kwizera" to access the "job_search_support_platform" database.
 
 HOW OUR PLATFORM CAN BE USED:
 
